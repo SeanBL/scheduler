@@ -25,6 +25,13 @@ textarea {
   white-space: pre-wrap;
 }
 
+.confirmation {
+  margin: -24px auto 7px auto;
+  width: 50%;
+  text-align: center;
+  
+}
+
 .time-block {
   text-align: center;
   border-radius: 15px;
@@ -68,4 +75,18 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+#hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
+
+#saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06aed5;
+  color: white;
 }
