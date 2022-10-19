@@ -25,6 +25,13 @@ textarea {
   white-space: pre-wrap;
 }
 
+.confirmation {
+  margin: -24px auto 7px auto;
+  width: 50%;
+  text-align: center;
+  
+}
+
 .time-block {
   text-align: center;
   border-radius: 15px;
