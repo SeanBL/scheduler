@@ -9,6 +9,8 @@ log("Testing and testing");
 
 currentDay.addClass('lead');
 
+$("div").first().hide();
+
 function displayDate() {
     var dateNow = moment().format('dddd, MMMM Do');
     currentDay.text(dateNow);
@@ -61,13 +63,12 @@ $("#saveBtn9").click(function(){
  
    events9am.push(textArea);
    
+   $("div").first().show();
+   $(".addTime").append("9AM ");
+
 storeText();
 renderText();
 });
-
-function getValue() {
-   
-}
 
 function renderText() {
 for (var i = 0; i < events9am.length; i++) {
@@ -75,10 +76,7 @@ for (var i = 0; i < events9am.length; i++) {
    $('#event9').text(event9am);
    console.log(event9am);
    console.log(textInput9.value);
-   if (event9am === textInput9.value) {
-
    }
-}
 }
 
 function storeText () {
@@ -107,6 +105,8 @@ init();
     }
   
     events10am.push(textArea);
+
+    $("div").first().show();
     
  storeText10();
  renderText10();
@@ -144,6 +144,8 @@ init();
     }
   
     events11am.push(textArea);
+
+    $("div").first().show();
     
  storeText11();
  renderText11();
@@ -181,6 +183,8 @@ init();
     }
   
     events12pm.push(textArea);
+
+    $("div").first().show();
     
  storeText12();
  renderText12();
@@ -218,6 +222,8 @@ init();
     }
   
     events1pm.push(textArea);
+
+    $("div").first().show();
     
  storeText1();
  renderText1();
@@ -255,6 +261,8 @@ init();
     }
   
     events2pm.push(textArea);
+
+    $("div").first().show();
     
  storeText2();
  renderText2();
@@ -292,6 +300,8 @@ init();
     }
   
     events3pm.push(textArea);
+
+    $("div").first().show();
     
  storeText3();
  renderText3();
@@ -329,6 +339,8 @@ init();
     }
   
     events4pm.push(textArea);
+
+    $("div").first().show();
     
  storeText4();
  renderText4();
@@ -366,6 +378,8 @@ init();
     }
   
     events5pm.push(textArea);
+
+    $("div").first().show();
     
  storeText5();
  renderText5();
