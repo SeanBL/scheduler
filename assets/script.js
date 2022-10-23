@@ -48,6 +48,7 @@ setInterval(function() {timeOfDay("6:00:00 pm", "5:00:00 pm", "#event5")}, 1000)
 //    console.log(textArea);
 
 // })
+var hourlyEvents = [];
 
 var textInput = document.querySelector("#event9");
 $("#saveBtn").click(function(){
@@ -55,43 +56,36 @@ $("#saveBtn").click(function(){
    if (textArea === "") {
       return;
    }
-
+ 
    hourlyEvents.push(textArea);
-   //textInput.value = "";
-   storeText();
-   renderText();
-   // testing(textArea);
+   
+storeText();
+renderText();
 });
 
-var hourlyEvents = [];
-
 function renderText() {
-   for (var i = 0; i < hourlyEvents.length; i++) {
-      var hourlyEvent = hourlyEvents[i];
-      event9.textContent = hourlyEvent;
-      //event9.setAtribute("data-index", i);
-      console.log(hourlyEvent);
-      event9.appendChild(hourlyEvent);
-   }
-   //$(event9).text(parsedText);
+for (var i = 0; i < hourlyEvents.length; i++) {
+   var hourlyEvent = hourlyEvents[i];
+   $('#event9').text(hourlyEvent);
+}
 }
 
-function storeText() {
+function storeText () {
    localStorage.setItem("storage-text", JSON.stringify(hourlyEvents));
 }
 
+
+
+
 function init() {
-  var gettingText = JSON.parse(localStorage.getItem("storage-text"));
-
-  if (gettingText !== null) {
-   hourlyEvents = gettingText;
-  }
-
-  renderText();
+   var gettingText = JSON.parse(localStorage.getItem("storage-text"));
+   if (gettingText !== null) {
+      hourlyEvents = gettingText;
+     }
+   renderText();
 }
 
 init();
-
 
 
 
