@@ -74,8 +74,6 @@ function renderText() {
 for (var i = 0; i < events9am.length; i++) {
    var event9am = events9am[i];
    $('#event9').text(event9am);
-   console.log(event9am);
-   console.log(textInput9.value);
    }
 }
 
